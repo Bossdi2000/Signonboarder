@@ -538,8 +538,11 @@ const Goals = () => {
 
             <div style={buttonsContainerStyle}>
               {["Stake", "Unstake"].map((action) => (
-                <button
+                <a
                   key={action}
+                  href=" http://stake.sign.global "
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     ...buttonStyle,
                     ...(hoveredButton2 === action ? buttonHoverStyle : {}),
@@ -548,7 +551,7 @@ const Goals = () => {
                   onMouseLeave={() => setHoveredButton2(null)}
                 >
                   {action}
-                </button>
+                </a>
               ))}
             </div>
           </div>

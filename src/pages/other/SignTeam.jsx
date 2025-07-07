@@ -75,7 +75,7 @@ const SignTeam = () => {
   const teamMembers = [
     {
       name: "Xin Yan",
-      role: "Founder",
+      role: "CEO/Co-Founder",
       image: "/SOE.jpeg",
       twitter: "https://x.com/realyanxin",
     },
@@ -94,7 +94,7 @@ const SignTeam = () => {
     
     {
       name: "JerryZ",
-      role: "SignOnboarder Designer",
+      role: "Product",
       image: "/Core1.jpg",
       twitter: "https://x.com/@Jerry_ZZQ",
     },
@@ -106,7 +106,7 @@ const SignTeam = () => {
     },
     {
       name: "Claire",
-      role: "Project Intern",
+      role: "Head of product",
       image: "/Core3.jpg",
       twitter: "https://x.com/@ClaireMa12",
     },
