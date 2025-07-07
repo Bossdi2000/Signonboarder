@@ -11,6 +11,7 @@ import Team from './pages/other/Team';
 import Signees from './pages/other/Signees';
 import Goals from './pages/other/Goals'; // Ensure import is correct
 import Article from './pages/other/Article'; // Ensure import is correct
+import SignTeam from './pages/other/SignTeam'; // Ensure import is correct
 import Sample from './pages/other/Sample';
 import NotFound from './pages/other/NotFound';
 
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/signees" element={<Signees />} />
           <Route path="/goals" element={<Goals />} /> {/* Added Goals route */}
           <Route path="/article" element={<Article />} /> {/* Added Article route */}
+          <Route path="/sign-team" element={<SignTeam />} /> {/* Added SignTeam route */}
           {/* Sample route for testing */}
           <Route path="/sample" element={<Sample />} />
           {/* Fallback route for 404 Not Found */}

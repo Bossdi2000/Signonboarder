@@ -15,6 +15,7 @@ const Navbar = () => {
     { label: 'OnboarderTeam', href: '/team', type: 'route' },
     { label: 'Signees', href: '/signees', type: 'section' },
     { label: 'Get signed', href: 'http://sign.global/orange-dynasty', type: 'external' },
+    { label: 'Sign-team', href: '/sign-team', type: 'route' },
   ];
 
   // Animation variants only for mobile menu items
@@ -91,7 +92,7 @@ const Navbar = () => {
                 },
               }}
             >
-              Sign-Onboarder
+              SIGN-ONBOARDER
             </Typography>
           </Box>
 

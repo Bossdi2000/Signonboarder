@@ -111,9 +111,27 @@ const Team = () => {
     },
     {
       name: "ROFYSAYO",
-      role: "SignOnboarder Designer",
+      role: "SignOnboarder Advocate",
       image: "/Team8.jpg",
       twitter: "https://x.com/RofeahS84788",
+    },
+     {
+      name: "Emerald's Gurl",
+      role: "SignOnboarder Coordinator",
+      image: "/Team9.jpg",
+      twitter: "https://x.com/@Hotboxofchoco",
+    },
+     {
+      name: "TABBYTHEBLACK",
+      role: "SignOnboarder SupportWarrior",
+      image: "/Team10.jpg",
+      twitter: "https://x.com/@Tabbyomodudu",
+    },
+     {
+      name: "BLACK DHEE",
+      role: "SignOnboarder Content writer",
+      image: "/Team11.jpg",
+      twitter: "https://x.com/@Da_Blackduchess",
     },
   ];
 

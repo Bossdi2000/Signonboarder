@@ -5,7 +5,7 @@ import { Sparkles, RefreshCw, Maximize2 } from "lucide-react";
 
 const HeroSection = () => {
   const navigate = useNavigate();
-  const introText = "You are lucky to have discovered the signonboarder’s platform";
+  const introText = "YOU ARE LUCKY TO HAVE DISCOVERED THE SIGNONBOARDER'S PLATFORM";
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
 
@@ -15,7 +15,7 @@ const HeroSection = () => {
       const timeout = setTimeout(() => {
         setDisplayedText((prev) => prev + introText[index]);
         setIndex(index + 1);
-      }, 50); // Reduced from 100ms to 50ms for faster display
+      }, 50);
       return () => clearTimeout(timeout);
     }
   }, [index, introText]);
@@ -60,7 +60,7 @@ const HeroSection = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: "20px",
+        paddingTop: "clamp(100px, 10vh, 120px)", // Added to account for fixed Navbar
       }}
     >
       {/* Floating Icons */}
@@ -100,7 +100,7 @@ const HeroSection = () => {
           position: "absolute",
           top: "180px",
           right: "120px",
-          color: "rgba(255, 255, 255, 0.3)", // Corrected from 0.9 to match other icons
+          color: "rgba(255, 255, 255, 0.3)",
           zIndex: 1,
         }}
       >
@@ -136,8 +136,8 @@ const HeroSection = () => {
           zIndex: 10,
           maxWidth: "1200px",
           width: "100%",
-          padding: "clamp(4rem, 8vw, 6rem) clamp(1rem, 4vw, 4rem)",
-          paddingBottom: "40px",
+          padding: "clamp(1.5rem, 5vw, 4rem) clamp(0.5rem, 2vw, 3rem)", // Optimized padding for mobile
+          paddingBottom: "40px", // Increased bottom padding
           textAlign: "left",
         }}
       >
@@ -148,22 +148,25 @@ const HeroSection = () => {
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "16px",
+            gap: "12px", // Reduced from 16px
             alignItems: "flex-start",
           }}
         >
-          {/* Introductory Text with Typewriter Effect */}
+          {/* Introductory Text with Typewriter Effect - Now Centered */}
           <motion.p
             variants={itemVariants}
             style={{
-              fontSize: "clamp(3.1rem, 4vw, 2.6rem)", // Larger than main heading
-              color: "#f97316", // Changed to match Onboarding Made Simple
-              maxWidth: "660px",
-              margin: "0",
-              lineHeight: "1",
+              fontSize: "clamp(2rem, 6vw, 3.2rem)", // Significantly increased font size
+              color: "white", // Changed to white as requested
+              maxWidth: "100%", // Full width to center properly
+              margin: "0 0 24px 0", // Added bottom margin for spacing
+              lineHeight: "1.3", // Slightly increased line height for better readability
               fontFamily: "'Playfair Display', serif",
               fontStyle: "italic",
-              fontWeight: "500",
+              fontWeight: "530",
+              textAlign: "center", // Center the text
+              width: "100%", // Ensure full width
+              padding: "0 8px", // Added padding for small screens
             }}
           >
             <AnimatePresence>
@@ -185,16 +188,17 @@ const HeroSection = () => {
           <motion.h1
             variants={itemVariants}
             style={{
-              fontSize: "clamp(1.5rem, 4vw, 3rem)",
-              fontWeight: "600",
+              fontSize: "clamp(1.2rem, 6vw, 3rem)", // Significantly increased font size
+              fontWeight: "350",
               color: "white",
-              lineHeight: "1.2",
-              margin: 0,
+              lineHeight: "1.1", // Tighter line height for large text
+              margin: "0 0 8px 0", // Added margin for spacing
               display: "flex",
               flexWrap: "wrap",
-              gap: "5px",
+              gap: "8px", // Increased gap
               letterSpacing: "-0.02em",
               fontFamily: "'Playfair Display', serif",
+              padding: "0 8px", // Added padding for small screens
             }}
           >
             <span>Show and be SIGNED</span>
@@ -202,29 +206,32 @@ const HeroSection = () => {
           <motion.span
             variants={itemVariants}
             style={{
-              fontSize: "clamp(1.8rem, 4.2vw, 3rem)",
-              color: "#f97316",
-              fontWeight: "500",
+              fontSize: "clamp(1.2rem, 6vw, 3rem)", // Significantly increased font size
+              color: "#f28c38", // Match intro text color
+              fontWeight: "350",
               fontStyle: "italic",
               fontFamily: "'Playfair Display', serif",
-              lineHeight: "1.2",
+              lineHeight: "1.1", // Tighter line height for large text
               letterSpacing: "-0.02em",
+              display: "block",
+              marginBottom: "16px", // Added margin for spacing
+              padding: "0 8px", // Added padding for small screens
             }}
           >
             Onboarding Made Simple,
           </motion.span>
 
-          {/* Subtitle */}
-           
           {/* Buttons Container */}
           <motion.div
             variants={itemVariants}
             style={{
-              paddingTop: "24px",
+              paddingTop: "24px", // Increased padding
               display: "flex",
-              gap: "16px",
+              gap: "16px", // Increased gap
               justifyContent: "flex-start",
               width: "100%",
+              flexWrap: "wrap", // Allow wrapping on small screens
+              padding: "24px 8px 0", // Added horizontal padding
             }}
           >
             {/* Claim Airdrop Button */}
@@ -234,26 +241,29 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 20px 40px rgba(249, 115, 22, 0.3)",
+                boxShadow: "0 15px 30px rgba(242, 140, 56, 0.3)", // Updated to match new color
               }}
               whileTap={{ scale: 0.95 }}
               style={{
                 position: "relative",
-                padding: "14px 28px",
-                background: "#f97316",
-                borderRadius: "10px",
+                padding: "16px 32px", // Increased padding for better touch targets
+                background: "#f28c38", // Updated color
+                borderRadius: "12px", // Increased border radius
                 color: "white",
                 fontWeight: "600",
-                fontSize: "clamp(0.9rem, 1.8vw, 1rem)",
+                fontSize: "clamp(1.1rem, 3vw, 1.4rem)", // Increased font size with better mobile scaling
                 border: "none",
                 cursor: "pointer",
-                boxShadow: "0 10px 30px rgba(249, 115, 22, 0.4)",
+                boxShadow: "0 8px 20px rgba(242, 140, 56, 0.4)", // Updated color
                 overflow: "hidden",
                 display: "flex",
                 alignItems: "center",
-                gap: "8px",
+                gap: "10px", // Increased gap
                 fontFamily: "'Inter', sans-serif",
                 textDecoration: "none",
+                minWidth: "max-content", // Prevent text wrapping
+                flex: "1 1 auto", // Responsive flex
+                maxWidth: "280px", // Max width for large screens
               }}
             >
               <span>Claim airdrop</span>
@@ -261,7 +271,7 @@ const HeroSection = () => {
                 animate={{ rotate: 360 }}
                 transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
               >
-                <Maximize2 size={18} />
+                <Maximize2 size={20} /> {/* Increased icon size */}
               </motion.div>
             </motion.a>
 
@@ -270,25 +280,28 @@ const HeroSection = () => {
               onClick={handleSignItClick}
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 20px 40px rgba(249, 115, 22, 0.3)",
+                boxShadow: "0 15px 30px rgba(242, 140, 56, 0.3)", // Updated color
               }}
               whileTap={{ scale: 0.95 }}
               style={{
                 position: "relative",
-                padding: "14px 28px",
-                background: "#f97316",
-                borderRadius: "10px",
+                padding: "16px 32px", // Increased padding for better touch targets
+                background: "#f28c38", // Updated color
+                borderRadius: "12px", // Increased border radius
                 color: "white",
                 fontWeight: "600",
-                fontSize: "clamp(0.9rem, 1.8vw, 1rem)",
+                fontSize: "clamp(1.1rem, 3vw, 1.4rem)", // Increased font size with better mobile scaling
                 border: "none",
                 cursor: "pointer",
-                boxShadow: "0 10px 30px rgba(249, 115, 22, 0.4)",
+                boxShadow: "0 8px 20px rgba(242, 140, 56, 0.4)", // Updated color
                 overflow: "hidden",
                 display: "flex",
                 alignItems: "center",
-                gap: "8px",
+                gap: "10px", // Increased gap
                 fontFamily: "'Inter', sans-serif",
+                minWidth: "max-content", // Prevent text wrapping
+                flex: "1 1 auto", // Responsive flex
+                maxWidth: "200px", // Max width for large screens
               }}
             >
               <span>Goals</span>
@@ -296,7 +309,7 @@ const HeroSection = () => {
                 animate={{ rotate: 360 }}
                 transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
               >
-                <Sparkles size={18} />
+                <Sparkles size={20} /> {/* Increased icon size */}
               </motion.div>
             </motion.button>
           </motion.div>
