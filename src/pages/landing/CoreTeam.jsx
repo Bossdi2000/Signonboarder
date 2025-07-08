@@ -77,7 +77,7 @@ const CoreTeam = () => {
     { name: "Potter Li", role: "Co-Founder & Tech Lead", image: "SOI.jpeg", twitter: "https://x.com/Potterlee222" },
     { name: "Jack Xu", role: "Co-Founder & CTO", image: "SOH.jpeg", twitter: "https://x.com/headcpx" },
     { name: "Zoe Chen", role: "Community Moderator", image: "SOG.jpeg", twitter: "https://x.com/0xzoe_im" },
-    { name: "Megan W", role: "Project Intern", image: "SOF.jpeg", twitter: "https://x.com/roguescholarbro" },
+    { name: "Sign Intern", role: "Project Intern", image: "SOF.jpeg", twitter: "https://x.com/roguescholarbro" },
   ];
 
   const cardVariants = {
@@ -112,7 +112,7 @@ const CoreTeam = () => {
             textAlign: "center",
           }}
         >
-          The Core Team
+          Sign Core Team
         </Typography>
         <Typography
           variant="body1"

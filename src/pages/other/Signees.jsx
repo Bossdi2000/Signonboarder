@@ -108,7 +108,7 @@ const Signees = () => {
     {
       name: "Mackaddy",
       image: "/Sign1.jpeg",
-      twitter: "https://x.com/@UniqueKhaddy_OX",
+      twitter: "https://x.com/@UniqueKhaddy_0X",
     },
     {
       name: "Favour",

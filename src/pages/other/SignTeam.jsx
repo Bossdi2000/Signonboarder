@@ -6,17 +6,17 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 // Styled Components - Now Smaller Circular
 const TeamMemberCard = styled(Box)(({ theme }) => ({
   backgroundColor: "#000000",
-  borderRadius: "50%", // Changed from "10px" to make it circular
-  padding: "15px", // Reduced padding for smaller circular layout
+  borderRadius: "50%",
+  padding: "15px",
   textAlign: "center",
   boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.15)",
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center", // Center content in circular container
+  justifyContent: "center",
   alignItems: "center",
-  width: "200px", // Reduced from 260px to 200px
-  height: "200px", // Reduced from 260px to 200px
+  width: "200px",
+  height: "200px",
   border: "1px solid #f97316",
   "&:hover": {
     transform: "translateY(-4px)",
@@ -24,13 +24,13 @@ const TeamMemberCard = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down("sm")]: {
     padding: "12px",
-    width: "160px", // Reduced from 200px to 160px
+    width: "160px",
     height: "160px",
   },
 }));
 
 const TeamMemberImage = styled(Box)(({ theme }) => ({
-  width: "60px", // Reduced from 80px to 60px
+  width: "60px",
   height: "60px",
   borderRadius: "50%",
   margin: "0 auto 8px auto",
@@ -47,26 +47,26 @@ const TeamMemberImage = styled(Box)(({ theme }) => ({
     transform: "scale(1.05)",
   },
   [theme.breakpoints.down("sm")]: {
-    width: "45px", // Reduced from 60px to 45px
+    width: "45px",
     height: "45px",
     margin: "0 auto 6px auto",
   },
 }));
 
 const SocialIcon = styled(IconButton)(({ theme }) => ({
-  width: "28px", // Reduced from 32px to 28px
+  width: "28px",
   height: "28px",
   backgroundColor: "#e65100",
   color: "#ffffff",
   transition: "all 0.2s ease",
-  marginTop: "6px", // Reduced from 8px to 6px
+  marginTop: "6px",
   "&:hover": {
     backgroundColor: "#f97316",
     color: "#ffffff",
     transform: "scale(1.1)",
   },
   [theme.breakpoints.down("sm")]: {
-    width: "24px", // Reduced from 28px to 24px
+    width: "24px",
     height: "24px",
   },
 }));
@@ -91,7 +91,6 @@ const SignTeam = () => {
       image: "/SOH.jpeg",
       twitter: "https://x.com/headcpx",
     },
-    
     {
       name: "JerryZ",
       role: "Product",
@@ -117,15 +116,14 @@ const SignTeam = () => {
       twitter: "https://x.com/0xzoe_im",
     },
     {
-      name: "Megan w",
+      name: "Sign Intern",
       role: "Project Intern",
       image: "/SOF.jpeg",
       twitter: "https://x.com/roguescholarbro",
     },
   ];
 
-  // The OGs team members (11 members)
-  const ogMembers = [
+  const signAffiliates = [
     {
       name: "Tajudeen",
       role: "King of Sign",
@@ -140,7 +138,7 @@ const SignTeam = () => {
     },
     {
       name: "Lucky Esemuede",
-      role: "Meme-Lord of Sign",
+      role: "Sign Support Warrior",
       image: "/OG3.jpg",
       twitter: "https://x.com/Lucky_of_Web3",
     },
@@ -176,7 +174,7 @@ const SignTeam = () => {
     },
     {
       name: "Truth",
-      role: "Growth Hacker",
+      role: "Sign Maxi",
       image: "/OG9.jpg",
       twitter: "https://x.com/TruthOnchained",
     },
@@ -187,10 +185,10 @@ const SignTeam = () => {
       twitter: "https://x.com/FransTp0",
     },
     {
-      name: "Oxbossj",
+      name: "0xbossj",
       role: "Wizard of Sign",
       image: "/OG11.jpg",
-      twitter: "https://x.com/Oxbossj",
+      twitter: "https://x.com/0xbossj",
     },
   ];
 
@@ -214,9 +212,9 @@ const SignTeam = () => {
         <Typography
           variant="h2"
           sx={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Montserrat', sans-serif", // Changed to Montserrat
             color: "#ffffff",
-            fontSize: { xs: "1.8rem", sm: "2.5rem", md: "3rem", lg: "3.5rem" }, // Increased font sizes
+            fontSize: { xs: "1.8rem", sm: "2.5rem", md: "3rem", lg: "3.5rem" },
             fontWeight: 700,
             mb: { xs: 1.5, md: 2 },
             textAlign: "center",
@@ -228,13 +226,13 @@ const SignTeam = () => {
         <Typography
           variant="body1"
           sx={{
-            fontFamily: "Inter, sans-serif",
+            fontFamily: "'Montserrat', sans-serif", // Changed to Montserrat
             color: "#d1d5db",
             maxWidth: { xs: "100%", md: "500px", lg: "600px" },
             margin: { xs: "0 auto 16px auto", md: "0 auto 24px auto" },
             textAlign: "center",
             lineHeight: 1.8,
-            fontSize: { xs: "0.9rem", md: "1rem", lg: "1.1rem" }, // Increased font sizes
+            fontSize: { xs: "0.9rem", md: "1rem", lg: "1.1rem" },
             px: { xs: 1, sm: 0 },
           }}
         >
@@ -245,7 +243,7 @@ const SignTeam = () => {
       {/* Team Grid */}
       <Grid
         container
-        spacing={{ xs: 2, sm: 3, md: 4 }} // Increased spacing for circular layout
+        spacing={{ xs: 2, sm: 3, md: 4 }}
         justifyContent="center"
         sx={{
           maxWidth: { xs: "100%", lg: "1400px", xl: "1600px" },
@@ -271,7 +269,7 @@ const SignTeam = () => {
               animate="visible"
               custom={index}
               whileHover={{ scale: 1.02 }}
-              style={{ width: "100%", maxWidth: "200px", height: "100%" }} // Updated maxWidth
+              style={{ width: "100%", maxWidth: "200px", height: "100%" }}
             >
               <TeamMemberCard>
                 <Box
@@ -289,10 +287,10 @@ const SignTeam = () => {
                   <Typography
                     variant="h5"
                     sx={{
-                      fontFamily: "Inter, sans-serif",
+                      fontFamily: "'Montserrat', sans-serif", // Changed to Montserrat
                       color: "#ffffff",
                       fontWeight: 600,
-                      fontSize: { xs: "0.8rem", sm: "0.9rem", md: "1rem" }, // Adjusted for smaller circles
+                      fontSize: { xs: "0.8rem", sm: "0.9rem", md: "1rem" },
                       mb: 0.3,
                       lineHeight: 1.2,
                       textAlign: "center",
@@ -303,10 +301,10 @@ const SignTeam = () => {
                   <Typography
                     variant="subtitle1"
                     sx={{
-                      fontFamily: "Inter, sans-serif",
+                      fontFamily: "'Montserrat', sans-serif", // Changed to Montserrat
                       color: "#ffb74d",
                       fontWeight: 500,
-                      fontSize: { xs: "0.65rem", sm: "0.7rem", md: "0.8rem" }, // Adjusted for smaller circles
+                      fontSize: { xs: "0.65rem", sm: "0.7rem", md: "0.8rem" },
                       lineHeight: 1.3,
                       textAlign: "center",
                       mb: 0.5,
@@ -411,10 +409,10 @@ const SignTeam = () => {
           description="Meet the passionate innovators driving Orange Dynasty (SIGN) to redefine Web3 engagement."
         />
 
-        {/* The OGs Section */}
+        {/* Sign Affiliates Section */}
         <TeamSection
-          title="The OGs"
-          members={ogMembers}
+          title="Sign Affiliates" // Changed from "The OGs"
+          members={signAffiliates}
           description="Our original supporters and community champions who have been with us since the beginning."
         />
       </Box>

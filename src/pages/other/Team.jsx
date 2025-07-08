@@ -77,7 +77,7 @@ const Team = () => {
       name: "Bonakesh",
       role: "SignOnboarder Founder",
       image: "/Team7.jpeg",
-      twitter: "https://x.com/Bonakesh",
+      twitter: "https://x.com/Bonakesh1",
     },
     {
       name: "Big_D",
@@ -95,13 +95,13 @@ const Team = () => {
       name: "The OA",
       role: "SignOnboarder Writer",
       image: "/Team3.jpeg",
-      twitter: "https://x.com/Jamielnspires1",
+      twitter: "https://x.com/JamieInspires1",
     },
     {
       name: "DOL4PO",
       role: "SignOnboarder Writer",
       image: "/Team2.jpeg",
-      twitter: "https://x.com/DOL4PO_",
+      twitter: "https://x.com/DOL4P0_",
     },
     {
       name: "MAALISH",
@@ -113,7 +113,7 @@ const Team = () => {
       name: "ROFYSAYO",
       role: "SignOnboarder Advocate",
       image: "/Team8.jpg",
-      twitter: "https://x.com/RofeahS84788",
+      twitter: "https://x.com/roffysayo1",
     },
      {
       name: "Emerald's Gurl",
