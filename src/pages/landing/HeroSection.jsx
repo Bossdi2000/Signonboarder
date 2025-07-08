@@ -26,7 +26,7 @@ const HeroSection = () => {
   };
 
   const handleTeamClick = () => {
-    navigate("/team"); // Navigate to Team.jsx page
+    navigate("/team");
   };
 
   const containerVariants = {
@@ -61,11 +61,11 @@ const HeroSection = () => {
         top: 0,
         left: 0,
         margin: 0,
-        padding: 0,
+        padding: 0, // Removed paddingTop
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        paddingTop: "clamp(80px, 8vh, 100px)",
+        boxSizing: "border-box",
       }}
     >
       {/* Floating Icons */}
@@ -81,8 +81,8 @@ const HeroSection = () => {
         }}
         style={{
           position: "absolute",
-          top: "140px",
-          left: "80px",
+          top: "clamp(100px, 10vh, 140px)",
+          left: "clamp(40px, 5vw, 80px)",
           color: "rgba(255, 255, 255, 0.3)",
           zIndex: 1,
         }}
@@ -103,8 +103,8 @@ const HeroSection = () => {
         }}
         style={{
           position: "absolute",
-          top: "180px",
-          right: "120px",
+          top: "clamp(120px, 12vh, 180px)",
+          right: "clamp(60px, 7vw, 120px)",
           color: "rgba(255, 255, 255, 0.3)",
           zIndex: 1,
         }}
@@ -125,8 +125,8 @@ const HeroSection = () => {
         }}
         style={{
           position: "absolute",
-          bottom: "200px",
-          right: "80px",
+          bottom: "clamp(120px, 12vh, 200px)",
+          right: "clamp(40px, 5vw, 80px)",
           color: "rgba(255, 255, 255, 0.3)",
           zIndex: 1,
         }}
@@ -139,13 +139,14 @@ const HeroSection = () => {
         style={{
           position: "relative",
           zIndex: 10,
-          maxWidth: "1000px",
+          maxWidth: "clamp(600px, 80vw, 1000px)",
           width: "100%",
-          padding: "clamp(1rem, 4vw, 3rem) clamp(0.5rem, 2vw, 2rem)",
+          padding: "clamp(1rem, 4vw, 2rem) clamp(0.5rem, 2vw, 1.5rem)",
           textAlign: "center",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          justifyContent: "center",
         }}
       >
         <motion.div
@@ -259,7 +260,7 @@ const HeroSection = () => {
                 display: "flex",
                 alignItems: "center",
                 gap: "clamp(4px, 1vw, 8px)",
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "'Montserrat', sans-serif",
                 minWidth: "max-content",
                 flex: "1 1 auto",
                 maxWidth: "clamp(140px, 30vw, 160px)",
@@ -297,7 +298,7 @@ const HeroSection = () => {
                 display: "flex",
                 alignItems: "center",
                 gap: "clamp(4px, 1vw, 8px)",
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "'Montserrat', sans-serif",
                 minWidth: "max-content",
                 flex: "1 1 auto",
                 maxWidth: "clamp(100px, 25vw, 120px)",

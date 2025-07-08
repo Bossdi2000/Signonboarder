@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box, Typography, styled } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import Navbar from "./Navbar"; // Adjust path
 import HeroSection from "./HeroSection"; // Placeholder or actual component
 import Features from "./Features";
@@ -108,7 +108,7 @@ const LandingPage = () => {
       <BackgroundWrapper>
         <Box
           sx={{
-            pt: { xs: "80px", md: "100px" }, // Offset for Navbar height
+            pt: { xs: "24px", md: "60px" }, // Reduced padding-top for small devices
             width: "100%",
             px: { xs: 2, md: 4 },
             py: { xs: 2, sm: 3, md: 4 },
