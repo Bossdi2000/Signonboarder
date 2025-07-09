@@ -266,7 +266,7 @@ const HeroSection = () => {
                 maxWidth: "clamp(140px, 30vw, 160px)",
               }}
             >
-              <span>Onboarder Team</span>
+              <span> SignOnboarder Team</span>
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
@@ -304,7 +304,7 @@ const HeroSection = () => {
                 maxWidth: "clamp(100px, 25vw, 120px)",
               }}
             >
-              <span>Sign's Guide</span>
+              <span>Sign Beginner's Guide</span>
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
