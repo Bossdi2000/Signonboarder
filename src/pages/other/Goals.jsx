@@ -302,21 +302,87 @@ const Goals = () => {
         <p style={paragraphStyle}>
           Hey! Hey!! Heyyyyy!🧡👋 Grab your popcorn while I properly onboard and guide you through the best web3 project🧡. I'm super excited to introduce you to one of the best projects that have re-written the future of cryptocurrency and web3; SIGN.
         </p>
+        
+        <div style={{ ...headingStyle, fontSize: "clamp(1.1rem, 2.8vw, 1.4rem)", textTransform: "uppercase", marginTop: "clamp(16px, 3vw, 24px)" }}>
+          WHAT IS SIGN?
+        </div>
         <p style={paragraphStyle}>
-          SIGN is a tech company which offers MONEY, FREEDOM, and INTEGRITY. For MONEY: Sign owns TokenTable, the largest airdrop distribution system which has generated millions of dollars. Airdrops like Notcoin and Kaito were distributed using TokenTable. For FREEDOM: Sign created SignPass, an on-chain residency card that will be adopted by many more countries. For INTEGRITY: Sign created Sign Protocol, formerly known as EthSign, which allows users to verify everything on-chain, such as signing contracts.
+          SIGN is a tech company which offers MONEY, FREEDOM and INTEGRITY. FOR MONEY: Sign owns TokenTable which is the largest airdrop distribution system which has generated millions of dollars. Airdrops like notcoin and Kaito was distributed using the TokenTable. FOR FREEDOM: Sign created SignPass which is the on-chain residency card that will be adopted by many more countries. FOR INTEGRITY: Sign created Sign Protocol formerly known as ethsign which allows users to verify everything on-chain for instance signing of contract.
         </p>
         <p style={paragraphStyle}>
-          Sign is for Builders, Countries, Governments, and basically everyone. Sign built a platform where everyone is treated equally, and your success is Sign's top priority. Sign created a community-driven ecosystem that fosters financial freedom, integrity, and growth for all. Sign's approach is to build a platform where you can be the best version of yourself—by thinking of who you want to be in the web3 space, exploring roles like content writer, video content creator, or graphic designer—and the Sign community will always support you and boost your platform while connecting you with like-minded people.
+          So in essence, Sign is for Builders, Sign is for Countries, Sign is for Governments and Sign is basically for everyone. Sign built a platform where everyone is treated equally, and your success is sign's top priority. Sign created a community-driven ecosystem which fosters financial freedom, integrity, and growth for all. Sign's approach is to build a platform where you can be the best version of yourself (by thinking of who you want to be in the web3 space, working towards exploring all the ways that you want to potentially be in the future; for example being a content writer, video content creators, graphics designers and so on), and the sign community will always support you and boost your platform while connecting you with like-minded people.
+        </p>
+        
+        <div style={{ ...headingStyle, fontSize: "clamp(1.1rem, 2.8vw, 1.4rem)", textTransform: "uppercase", marginTop: "clamp(16px, 3vw, 24px)" }}>
+          HOW TO EARN $SIGN AIRDROP/TOKENS WHICH ARE HUGE
+        </div>
+        <p style={paragraphStyle}>
+          The $Sign airdrop is Sign's way of showing appreciation to the ones who have been with Sign through the ups, downs, builds, bugs, and breakthrough. You earn $sign airdrop by securing free Sign SBTs. SBTs are non-transferable badges of honor which you can receive based on your genuine engagement and contribution.
         </p>
         <p style={paragraphStyle}>
-          The $Sign airdrop is Sign's way of showing appreciation to those who have been with Sign through the ups, downs, builds, bugs, and breakthroughs. You earn $Sign airdrop by securing free Sign SBTs—non-transferable badges of honor received based on your genuine engagement and contribution. The four official ways to earn Sign SBTs are: Support Warrior (genuine feedback and participation on Sign's Twitter), Orange in the Veins (consistent quality participation in Sign's Daily Orange Dynasty Calendar on X or daily missions on Telegram), Outstanding Content Creation (based on creativity, passion, and consistency), and Serious Builders (going above and beyond in building the Sign community).
+          Below are the 4 (four) official ways to earn sign SBTs:
         </p>
         <p style={paragraphStyle}>
-          The best part? Equal Opportunities: SIGN treats everyone equally, regardless of follower count or background. Supportive Community: Join like-minded individuals, developers, designers, and creators to collaborate and grow. Existing Success: SIGN products like Sign Pass, EthSign, Sign Protocol, and Token Table are making waves, with $15 million in revenue in 2024 and investment from CZ, CEO of Binance, in 2025. No Ulterior Motives: Sign focuses on supporting your goals without unrealistic promises.
+          1. Support Warrior: These are for those who genuinely support sign and the sign community. Be a reply guy by giving genuine feedback to the tweets of your fellow sign members and genuinely participate in Sign's Twitter account
         </p>
         <p style={paragraphStyle}>
-          How can you benefit? Build and grow on Sign with massive support, access exclusive opportunities, earn SBTs (Outstanding Content Creators, Serious Builders, Orange in the Veins, Support Warriors), and trade NFTs representing your commitment. Connect with like-minded individuals and join a community changing the future of web3. If you're just beginning to see the $Sign, congratulations—you're early for future SBT rounds and the Sign Super App. Don’t fade $Sign for any reason!
+          2. Orange in the veins: These are for those who consistently show quality participation in the sign community which includes but not limited to -Consistent quality participation of Sign's Daily Orange Dynasty Calendar on X (hosted by Oxzoe_im) -Consistent quality participation on Sign's Daily mission on Telegram
         </p>
+        <p style={paragraphStyle}>
+          3. Outstanding Content Creation: These are gotten based on the level of creativity and passion that one puts into creating content, the level of consistency and improvement of one's content. And this creation is not limited to any form or style.
+        </p>
+        <p style={paragraphStyle}>
+          4. Serious Builders: These are those who go way above and beyond in building our sign community.
+        </p>
+        
+        <div style={{ ...headingStyle, fontSize: "clamp(1.1rem, 2.8vw, 1.4rem)", textTransform: "uppercase", marginTop: "clamp(16px, 3vw, 24px)" }}>
+          THE BEST PART?
+        </div>
+        <p style={paragraphStyle}>
+          - Equal Opportunities: SIGN treats everyone that is seeing the signs equally, regardless of follower count, account size or background. Everyone can have access to the same opportunities and support.
+        </p>
+        <p style={paragraphStyle}>
+          - Supportive Community: When you join the sign community, you will meet like-minded individuals, developers, designers, content writers, and creators. Collaborate, learn, and grow together!
+        </p>
+        <p style={paragraphStyle}>
+          - Existing Success: SIGN products, including Sign Pass, Ethsign, Sign Protocol, and Token Table, are already making waves in the industry. Sign secured $15 million in revenue in 2024 and also received a significant investment from CZ the CEO of Binance in 2025.
+        </p>
+        <p style={paragraphStyle}>
+          - No Ulterior Motives: Sign is not looking for community funding or promising unrealistic returns. Sign's goal is to support you in achieving your goals, and the rewards($sign will follow naturally.
+        </p>
+        
+        <div style={{ ...headingStyle, fontSize: "clamp(1.1rem, 2.8vw, 1.4rem)", textTransform: "uppercase", marginTop: "clamp(16px, 3vw, 24px)" }}>
+          HOW CAN YOU BENEFIT?
+        </div>
+        <p style={paragraphStyle}>
+          - Build and Grow: Create and build on Sign, and Sign will provide massive support to help you succeed. You will have access to exclusive opportunities, including early access to new Sign releases, community-driven projects, and exclusive benefits.
+        </p>
+        <p style={paragraphStyle}>
+          - Showcase Your Involvement: Earn badge of honor by securing Sign SBTs which include Outstanding Content Creators, Serious Builders, Orange in the Veins, and Support Warriors. You can also own and trade NFTs that represent your commitment to the Orange Dynasty.
+        </p>
+        <p style={paragraphStyle}>
+          - Connect with Like-Minded Individuals: Join our community and network with people who share your passions and interests.
+        </p>
+        
+        <div style={{ ...headingStyle, fontSize: "clamp(1.1rem, 2.8vw, 1.4rem)", textTransform: "uppercase", marginTop: "clamp(16px, 3vw, 24px)" }}>
+          WHAT SETS SIGN APART? 🔥
+        </div>
+        <p style={paragraphStyle}>
+          - No Farming: Sign is not farmable hence there is no referral link for sign up, and Sign is focused on building a sustainable ecosystem that benefits everyone.
+        </p>
+        <p style={paragraphStyle}>
+          - Community-First Approach: Sign is committed to providing value to every member. You're not creating for Sign; you're creating for yourself, and the sign community will be there to support you every step of the way.
+        </p>
+        
+        <div style={{ ...headingStyle, fontSize: "clamp(1.1rem, 2.8vw, 1.4rem)", textTransform: "uppercase", marginTop: "clamp(16px, 3vw, 24px)" }}>
+          READY TO JOIN THE MOVEMENT? 🔥
+        </div>
+        <p style={paragraphStyle}>
+          If you're ready to take control of your financial future and join a community that's changing the future of web3, then Sign is for you. Don't just think about what you can do for SIGN; think about how SIGN can help you grow and achieve your goals. Let's build a brighter future together! If you are just beginning to See the $Sign, Congratulations on still being early, and you are perfectly positioned for our future SBT rounds and the Sign Super app. If you have seen the sign and sign is yet to see you then it's on its way. If you haven't Seen the Sign, Well now you do 🧡
+        </p>
+        <p style={paragraphStyle}>
+          Do not fade $Sign for any reason!
+          </p>
       </>
     ),
   };
@@ -326,13 +392,42 @@ const Goals = () => {
     body: (
       <>
         <p style={paragraphStyle}>
-          Ready to join the Sign community and become part of the Orange Dynasty? Follow these steps to get started on your web3 journey with Sign. (Placeholder content—please provide the actual steps to replace this text.)
+          STEP TO STEP GUIDE ON HOW TO PROPERLY JOIN SIGN
         </p>
+        <ol style={{ ...paragraphStyle, paddingLeft: "20px" }}>
+          <li>
+            a. Click on the official sign Twitter link (<a href="https://x.com/sign" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@sign</a>)<br />
+            b. Click on Let’s Go<br />
+            C. Then connect your twitter account by clicking on the button on the top left corner<br />
+            D. Click on Sign, complete the process and get signed<br />
+            E. Click on Quality time to know more about the sign team<br />
+            F. Click on the Orange Print in order to understand what sign is all about<br />
+            G. Click on Sign glasses maker, select your Twitter profile picture photo and add the sign glasses to your picture and save it, then change your profile picture to seeing the signs picture
+          </li>
+          <li>
+            A. Follow <a href="https://x.com/signonboarder" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@signonboarder</a> on Twitter, turn on their post notifications, join their community, access their website through their Twitter bio and then attend their Twitter spaces every Mondays and Thursdays to learn more about sign and also to ask your sign based questions, so <a href="https://x.com/signonboarder" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@signonboarder</a> will properly onboard, guide and spotlight you into sign.<br />
+            B. Follow the official sign accounts on Twitter; <a href="https://x.com/ethsign" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@ethsign</a>, <a href="https://x.com/sign" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@sign</a>, <a href="https://x.com/tokentable" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@tokentable</a>, <a href="https://x.com/signpass" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@signpass</a> and turn on your post notifications, make sure to engage on their Twitter tweets<br />
+            C. Return to <a href="https://x.com/signonboarder" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@signonboarder</a>‘s website, click on the Menu bar by the top right corner, then click on Sign-Team and follow all the Twitter accounts of the sign-team and the sign affiliates/sign OGs and engage with their tweets in order to get insights about sign.<br />
+            D. Also follow the Twitter accounts of the signonboarder team.
+          </li>
+          <li>
+            Join the orange dynasty Community (sign community) on Twitter (<a href="https://x.com/communities/orangedynasty" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>Orange Dynasty</a>) and you can as well (this is optional) pin the community to your profile (use android phone) by<br />
+            - click on the community<br />
+            - scroll down a bit, click on the star symbol just below the Orange Dynasty<br />
+            - Click on Pin Community on your profile<br />
+            - Click on Spotlight Community on your profile<br />
+            - Then click on Communities<br />
+            - Then select Orange Dynasty and click on Save.
+          </li>
+          <li>
+            B. Join the telegram community of sign (<a href="https://t.me/signcommunity" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>Sign Telegram</a>) and respectfully vibe with everyone there
+          </li>
+          <li>
+            Go to all the official twitter accounts of sign which includes <a href="https://x.com/sign" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@sign</a>, <a href="https://x.com/ethsign" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@ethsign</a>, <a href="https://x.com/tokentable" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@tokentable</a>, <a href="https://x.com/signpass" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@signpass</a> and read all the simplified articles there in order to understand what sign is all about and then position yourself in the right way.
+          </li>
+        </ol>
         <p style={paragraphStyle}>
-          Engage with the Sign community on platforms like Twitter and Telegram. Contribute through content creation, community participation, or other activities to earn Sign SBTs, which showcase your involvement and commitment.
-        </p>
-        <p style={paragraphStyle}>
-          Stay tuned for detailed steps on how to properly onboard, connect with like-minded individuals, and take advantage of Sign’s ecosystem to build, grow, and succeed in the web3 space.
+          Congratulations on joining the sign project. I wish you the best of luck as the newest signee 🧡
         </p>
       </>
     ),
@@ -349,7 +444,7 @@ const Goals = () => {
           The staking process likely involves a web interface (e.g., app.ethsign.xyz/staking), where users connect their wallets to stake tokens. Rewards are claimable periodically, and the short unstaking period provides flexibility.
         </p>
         <p style={paragraphStyle}>
-          Benefits of staking include a unique role in the app (possibly a status or governance privilege), exclusive early access to new releases, and recognition as a "certified orange builder" tied to the "Orange Dynasty" branding. These perks aim to foster community engagement and loyalty, potentially offering priority in app features or events.
+          Benefits of staking include a unique role in the app (possibly a status or governance privilege), exclusive early access to new releases, and recognition as a "certified orange builder" tied to the "Orange Dynasty" branding. These perks aim to foster community engagement and loyalty, possibly offering priority in app features or events.
         </p>
         <p style={paragraphStyle}>
           However, there are risks to consider: token price volatility, network issues, and underwhelming app releases that could reduce the value of rewards and benefits. Surprise community-driven releases, like airdrops or NFTs, could enhance returns, but their impact depends on execution.
@@ -475,7 +570,7 @@ const Goals = () => {
 
             <div style={buttonsContainerStyle}>
               <Link
-                to="/article"
+                to="/user/article"
                 style={{
                   ...articleButtonStyle,
                   ...(hoveredButton1 === "Articles" ? buttonHoverStyle : {}),
