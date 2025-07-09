@@ -570,7 +570,7 @@ const Goals = () => {
 
             <div style={buttonsContainerStyle}>
               <Link
-                to="/user/article"
+                to="/article"
                 style={{
                   ...articleButtonStyle,
                   ...(hoveredButton1 === "Articles" ? buttonHoverStyle : {}),
