@@ -411,7 +411,7 @@ const Goals = () => {
             D. Also follow the Twitter accounts of the signonboarder team.
           </li>
           <li>
-            Join the orange dynasty Community (sign community) on Twitter (<a href="https://x.com/communities/orangedynasty" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>Orange Dynasty</a>) and you can as well (this is optional) pin the community to your profile (use android phone) by<br />
+            Open your Twitter app and search for @sign, then scroll down a bit, select and join the Orange Dynasty Community (sign community). You can decide to pin the sign community to your profile (use Android phone) by
             - click on the community<br />
             - scroll down a bit, click on the star symbol just below the Orange Dynasty<br />
             - Click on Pin Community on your profile<br />
