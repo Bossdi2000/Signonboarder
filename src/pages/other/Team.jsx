@@ -101,7 +101,7 @@ const Team = () => {
       name: "DOL4PO",
       role: "SignOnboarder Writer",
       image: "/Team2.jpeg",
-      twitter: "https://x.com/DOL4P0_",
+      twitter: "https://x.com/D0L4P0_",
     },
     {
       name: "MAALISH",

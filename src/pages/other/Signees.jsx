@@ -118,7 +118,7 @@ const Signees = () => {
     {
       name: "Dolapo",
       image: "/Team2.jpeg",
-      twitter: "https://x.com/@DOL4PO_",
+      twitter: "https://x.com/@D0L4PO_",
     },
     {
       name: "Joe Boy",

@@ -1,8 +1,7 @@
-"use client"
-
-import React, { useState, useRef } from "react"
-import { Box, styled } from "@mui/material"
-import { Link } from "react-router-dom"
+"use client";
+import React, { useState, useRef } from "react";
+import { Box, styled } from "@mui/material";
+import { Link } from "react-router-dom";
 
 // Styled GridBackground Component
 const GridBackground = styled(Box)({
@@ -17,7 +16,7 @@ const GridBackground = styled(Box)({
   `,
   zIndex: 1,
   pointerEvents: "none",
-})
+});
 
 // Background Wrapper Component
 const BackgroundWrapper = ({ children }) => (
@@ -59,7 +58,7 @@ const BackgroundWrapper = ({ children }) => (
     />
     {children}
   </Box>
-)
+);
 
 const Goals = () => {
   // State to track show more/less for each container
@@ -67,54 +66,57 @@ const Goals = () => {
     container1: false,
     container2: false,
     container3: false,
-  })
+    container4: false,
+  });
 
   // Refs for each container to control scrolling
-  const container1Ref = useRef(null)
-  const container2Ref = useRef(null)
-  const container3Ref = useRef(null)
+  const container1Ref = useRef(null);
+  const container2Ref = useRef(null);
+  const container3Ref = useRef(null);
+  const container4Ref = useRef(null);
 
   // Hover states for buttons
-  const [hoveredButton1, setHoveredButton1] = useState(null)
-  const [hoveredButton2, setHoveredButton2] = useState(null)
-  const [hoveredButton3, setHoveredButton3] = useState(null)
+  const [hoveredButton1, setHoveredButton1] = useState(null);
+  const [hoveredButton2, setHoveredButton2] = useState(null);
+  const [hoveredButton3, setHoveredButton3] = useState(null);
+  const [hoveredButton4, setHoveredButton4] = useState(null);
 
   const toggleShowMore = (container) => {
     setShowMore((prev) => {
-      const newState = { ...prev, [container]: !prev[container] }
-      // Scroll to top for both Show More and Show Less
+      const newState = { ...prev, [container]: !prev[container] };
       const refMap = {
         container1: container1Ref,
         container2: container2Ref,
         container3: container3Ref,
-      }
-      refMap[container].current.scrollTo(0, 0)
-      return newState
-    })
-  }
+        container4: container4Ref,
+      };
+      refMap[container].current.scrollTo(0, 0);
+      return newState;
+    });
+  };
 
   // Character limit for truncated text (excluding heading)
-  const charLimit = 200
+  const charLimit = 200;
 
   // Function to extract text from JSX content
   const extractText = (children) => {
-    if (typeof children === "string") return children
+    if (typeof children === "string") return children;
     if (Array.isArray(children)) {
-      return children.map(extractText).join("")
+      return children.map(extractText).join("");
     }
     if (React.isValidElement(children)) {
-      return extractText(children.props.children)
+      return extractText(children.props.children);
     }
-    return ""
-  }
+    return "";
+  };
 
   // Function to truncate text at the last complete word within charLimit
   const truncateText = (text, limit) => {
-    if (text.length <= limit) return text
-    const subString = text.slice(0, limit)
-    const lastSpaceIndex = subString.lastIndexOf(" ")
-    return lastSpaceIndex > 0 ? subString.slice(0, lastSpaceIndex) + "..." : subString + "..."
-  }
+    if (text.length <= limit) return text;
+    const subString = text.slice(0, limit);
+    const lastSpaceIndex = subString.lastIndexOf(" ");
+    return lastSpaceIndex > 0 ? subString.slice(0, lastSpaceIndex) + "..." : subString + "...";
+  };
 
   const pageStyle = {
     minHeight: "100vh",
@@ -128,7 +130,7 @@ const Goals = () => {
     justifyContent: "flex-start",
     alignItems: "center",
     paddingTop: "clamp(100px, 10vh, 120px)",
-  }
+  };
 
   const containerStyle = {
     width: "100%",
@@ -139,7 +141,7 @@ const Goals = () => {
     display: "flex",
     flexDirection: "column",
     gap: "clamp(20px, 4vw, 40px)",
-  }
+  };
 
   const titleStyle = {
     textAlign: "center",
@@ -150,7 +152,8 @@ const Goals = () => {
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
-  }
+    fontFamily: "'Montserrat', sans-serif",
+  };
 
   const contentContainerStyle = {
     background: "linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)",
@@ -170,7 +173,7 @@ const Goals = () => {
     justifyContent: "space-between",
     alignItems: "center",
     zIndex: 2,
-  }
+  };
 
   const contentTextStyle = {
     fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
@@ -178,7 +181,8 @@ const Goals = () => {
     marginBottom: "clamp(16px, 3vw, 32px)",
     color: "#f0f0f0",
     textAlign: "justify",
-  }
+    fontFamily: "'Montserrat', sans-serif",
+  };
 
   const buttonsContainerStyle = {
     display: "flex",
@@ -186,7 +190,7 @@ const Goals = () => {
     justifyContent: "center",
     flexWrap: "wrap",
     marginTop: "auto",
-  }
+  };
 
   const buttonStyle = {
     background: "linear-gradient(135deg, #ff6600 0%, #ff9933 100%)",
@@ -203,18 +207,19 @@ const Goals = () => {
     transition: "all 0.3s ease",
     textDecoration: "none",
     display: "inline-block",
-  }
+    fontFamily: "'Montserrat', sans-serif",
+  };
 
   const articleButtonStyle = {
     ...buttonStyle,
     padding: "clamp(10px, 2vw, 15px) clamp(30px, 4vw, 40px)",
-  }
+  };
 
   const buttonHoverStyle = {
     transform: "translateY(-3px)",
     boxShadow: "0 8px 25px rgba(255, 102, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
     background: "linear-gradient(135deg, #ff9933 0%, #ffcc66 100%)",
-  }
+  };
 
   const showMoreButtonStyle = {
     background: "transparent",
@@ -229,13 +234,14 @@ const Goals = () => {
     letterSpacing: "1px",
     transition: "all 0.3s ease",
     marginTop: "8px",
-  }
+    fontFamily: "'Montserrat', sans-serif",
+  };
 
   const showMoreButtonHoverStyle = {
     background: "#ff6600",
     color: "#ffffff",
     transform: "translateY(-2px)",
-  }
+  };
 
   const headingStyle = {
     fontSize: "clamp(1.2rem, 3vw, 1.5rem)",
@@ -243,7 +249,17 @@ const Goals = () => {
     color: "#ff6600",
     marginBottom: "clamp(8px, 2vw, 16px)",
     textAlign: "center",
-  }
+    fontFamily: "'Montserrat', sans-serif",
+  };
+
+  const paragraphStyle = {
+    fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
+    lineHeight: 1.8,
+    color: "#f0f0f0",
+    textAlign: "justify",
+    fontFamily: "'Montserrat', sans-serif",
+    marginBottom: "clamp(8px, 2vw, 16px)",
+  };
 
   const terminologyItemStyle = {
     background: "rgba(255, 102, 0, 0.05)",
@@ -252,7 +268,7 @@ const Goals = () => {
     padding: "clamp(12px, 2vw, 16px)",
     marginBottom: "clamp(8px, 1.5vw, 12px)",
     transition: "all 0.3s ease",
-  }
+  };
 
   const terminologyTermStyle = {
     fontSize: "clamp(0.9rem, 2vw, 1.1rem)",
@@ -260,103 +276,92 @@ const Goals = () => {
     color: "#ff6600",
     marginBottom: "4px",
     display: "block",
-  }
+    fontFamily: "'Montserrat', sans-serif",
+  };
 
   const terminologyMeaningStyle = {
     fontSize: "clamp(0.8rem, 1.8vw, 1rem)",
     color: "#d0d0d0",
     lineHeight: 1.5,
-  }
+    fontFamily: "'Montserrat', sans-serif",
+  };
 
   const terminologyAuthorStyle = {
     fontSize: "clamp(0.7rem, 1.5vw, 0.9rem)",
     color: "#ff9933",
     fontStyle: "italic",
     marginTop: "4px",
-  }
+    fontFamily: "'Montserrat', sans-serif",
+  };
 
   // Content for each container
   const content1 = {
     heading: "What's SIGN all about?",
     body: (
       <>
-        Hey! Hey!! Heyyyyy!🧡👋 Grab your popcorn while I properly onboard and guide you through the best web3
-        project🧡. I'm super excited to introduce you to one of the best projects that have re-written the future of
-        cryptocurrency and web3; SIGN What is SIGN? SIGN is a tech company which offers MONEY, FREEDOM and INTEGRITY;
-        FOR MONEY: Sign owns TokenTable which is the largest airdrop distribution system which have generated millions
-        of dollars. Airdrops like notcoin and Kaito was distributed using the TokenTable. FOR FREEDOM: Sign created
-        SignPass which is the on-chain residency card that will be adopted by many more countries. FOR INTEGRITY: Sign
-        created Sign Protocol formerly known as ethsign which allows users to verify everything on-chain for instance
-        signing of contract. So in essence, Sign is for Builders, Sign is for Countries, Sign is for Governments and
-        Sign is basically for everyone. Sign built a platform where everyone is treated equally, and your success is
-        sign's top priority. Sign created a community-driven ecosystem which fosters financial freedom, integrity, and
-        growth for all. Sign's approach is to build a platform where you can be the best version of yourself (by
-        thinking of who you want to be in the web3 space, working towards exploring all the ways that you want to
-        potentially be in the future; for example being a content writer, video content creators, graphics designers and
-        so on), and the sign community will always support you and boost your platform while connecting you with
-        like-minded people. Now pay close attention to the next title below HOW TO EARN $SIGN AIRDROP/TOKENS WHICH ARE
-        HUGE The $Sign airdrop is Sign's way of showing appreciation to the ones who have been with Sign through the
-        ups, downs, builds, bugs, and breakthrough. You earn $sign airdrop by securing free Sign SBTs. SBTs are
-        non-transferable badges of honor which you can receive based on your genuine engagement and contribution. Below
-        are the 4 (four) official ways to earn sign SBTs. Support Warrior: These are for those who genuinely support
-        sign and the sign community. Be a reply guy by giving genuine feedback to the tweets of your fellow sign members
-        and genuinely participate in Sign's Twitter account Orange in the veins: These are for those who consistently
-        show quality participation in the sign community which includes but not limited to -Consistent quality
-        participation of Sign's Daily Orange Dynasty Calender on X (hosted by Oxzoe_im) -Consistent quality
-        participation on Sign's Daily mission on Telegram (https://t.me/orangedynasty) Outstanding Content Creation:
-        These are gotten based on the level of creativity and passion that one puts into creating content, the level of
-        consistency and improvement of one's content. And this creation is not limited to any form or style. Serious
-        Builders: These are those who go way above and beyond in building our sign community. The Best Part? Equal
-        Opportunities: SIGN treats everyone that is seeing the signs equally, regardless of follower count, account size
-        or background. Everyone can have access to the same opportunities and support. Supportive Community: When you
-        join the sign community, you will meet like-minded individuals, developers, designers, content writers, and
-        creators. Collaborate, learn, and grow together! Existing Success: SIGN products, including Sign Pass, Ethsign,
-        Sign Protocol, and Token Table, are already making waves in the industry. Sign secured $15 million in revenue in
-        2024 and also received a significant investment from CZ the CEO of Binance in 2025. No Ulterior Motives: Sign is
-        not looking for community funding or promising unrealistic returns. Sign's goal is to support you in achieving
-        your goals, and the rewards($sign will follow naturally. How Can You Benefit? Build and Grow: Create and build
-        on Sign, and Sign will provide massive support to help you succeed. You will have access to exclusive
-        opportunities, including early access to new Sign releases, community-driven projects, and exclusive benefits.
-        Showcase Your Involvement: Earn badge of honor by securing Sign SBTs which include Outstanding Content Creators,
-        Serious Builders, Orange in the Veins, and Support Warriors. You can also own and trade NFTs that represent your
-        commitment to the Orange Dynasty. Connect with Like-Minded Individuals: Join our community and network with
-        people who share your passions and interests. What Sets SIGN Apart? 🔥 No Farming: Sign is not farmable hence
-        there is no referral link for sign up, and Sign is focused on building a sustainable ecosystem that benefits
-        everyone. Community-First Approach: Sign is committed to providing value to every member. You're not creating
-        for Sign; you're creating for yourself, and the sign community will be there to support you every step of the
-        way. Ready to Join the Movement? 🔥 If you're ready to take control of your financial future and join a
-        community that's changing the future of web3, then Sign is for you. Don't just think about what you can do for
-        SIGN; think about how SIGN can help you grow and achieve your goals. Let's build a brighter future together! If
-        you are just beginning to the See the $Sign, Congratulations on still being early, and you are perfectly
-        positioned for our future SBT rounds and the Sign Super app. If you have seen the sign and sign is yet to see
-        you then it's on its way. If you haven't Seen the Sign, Well now you do 🧡 Do not fade $Sign for any reason
+        <p style={paragraphStyle}>
+          Hey! Hey!! Heyyyyy!🧡👋 Grab your popcorn while I properly onboard and guide you through the best web3 project🧡. I'm super excited to introduce you to one of the best projects that have re-written the future of cryptocurrency and web3; SIGN.
+        </p>
+        <p style={paragraphStyle}>
+          SIGN is a tech company which offers MONEY, FREEDOM, and INTEGRITY. For MONEY: Sign owns TokenTable, the largest airdrop distribution system which has generated millions of dollars. Airdrops like Notcoin and Kaito were distributed using TokenTable. For FREEDOM: Sign created SignPass, an on-chain residency card that will be adopted by many more countries. For INTEGRITY: Sign created Sign Protocol, formerly known as EthSign, which allows users to verify everything on-chain, such as signing contracts.
+        </p>
+        <p style={paragraphStyle}>
+          Sign is for Builders, Countries, Governments, and basically everyone. Sign built a platform where everyone is treated equally, and your success is Sign's top priority. Sign created a community-driven ecosystem that fosters financial freedom, integrity, and growth for all. Sign's approach is to build a platform where you can be the best version of yourself—by thinking of who you want to be in the web3 space, exploring roles like content writer, video content creator, or graphic designer—and the Sign community will always support you and boost your platform while connecting you with like-minded people.
+        </p>
+        <p style={paragraphStyle}>
+          The $Sign airdrop is Sign's way of showing appreciation to those who have been with Sign through the ups, downs, builds, bugs, and breakthroughs. You earn $Sign airdrop by securing free Sign SBTs—non-transferable badges of honor received based on your genuine engagement and contribution. The four official ways to earn Sign SBTs are: Support Warrior (genuine feedback and participation on Sign's Twitter), Orange in the Veins (consistent quality participation in Sign's Daily Orange Dynasty Calendar on X or daily missions on Telegram), Outstanding Content Creation (based on creativity, passion, and consistency), and Serious Builders (going above and beyond in building the Sign community).
+        </p>
+        <p style={paragraphStyle}>
+          The best part? Equal Opportunities: SIGN treats everyone equally, regardless of follower count or background. Supportive Community: Join like-minded individuals, developers, designers, and creators to collaborate and grow. Existing Success: SIGN products like Sign Pass, EthSign, Sign Protocol, and Token Table are making waves, with $15 million in revenue in 2024 and investment from CZ, CEO of Binance, in 2025. No Ulterior Motives: Sign focuses on supporting your goals without unrealistic promises.
+        </p>
+        <p style={paragraphStyle}>
+          How can you benefit? Build and grow on Sign with massive support, access exclusive opportunities, earn SBTs (Outstanding Content Creators, Serious Builders, Orange in the Veins, Support Warriors), and trade NFTs representing your commitment. Connect with like-minded individuals and join a community changing the future of web3. If you're just beginning to see the $Sign, congratulations—you're early for future SBT rounds and the Sign Super App. Don’t fade $Sign for any reason!
+        </p>
       </>
     ),
-  }
+  };
 
   const content2 = {
+    heading: "Steps On How to Properly Join Sign",
+    body: (
+      <>
+        <p style={paragraphStyle}>
+          Ready to join the Sign community and become part of the Orange Dynasty? Follow these steps to get started on your web3 journey with Sign. (Placeholder content—please provide the actual steps to replace this text.)
+        </p>
+        <p style={paragraphStyle}>
+          Engage with the Sign community on platforms like Twitter and Telegram. Contribute through content creation, community participation, or other activities to earn Sign SBTs, which showcase your involvement and commitment.
+        </p>
+        <p style={paragraphStyle}>
+          Stay tuned for detailed steps on how to properly onboard, connect with like-minded individuals, and take advantage of Sign’s ecosystem to build, grow, and succeed in the web3 space.
+        </p>
+      </>
+    ),
+  };
+
+  const content3 = {
     heading: "Staking $SIGN",
     body: (
       <>
-        The Sign Super App's staking program, centered on the $SIGN token, allows users to lock tokens for a 7-day
-        minimum to earn rewards and benefits. With a 10% annual percentage rate (APR), staking offers competitive
-        passive income, potentially yielding 100 $SIGN per 1,000 staked annually, though returns depend on token price
-        stability. The process likely involves a web interface (e.g., app.ethsign.xyz/staking), where users connect
-        wallets to stake, with rewards claimable periodically, offering flexibility due to the short unstaking period.
-        Benefits of Staking: A unique role in the app (possibly a status or governance privilege). Exclusive early
-        access to new releases. Recognition as a "certified orange builder" tied to the "Orange Dynasty" branding. These
-        benefits aim to foster community engagement and loyalty, potentially offering priority in app features or
-        events. However, the tangible value of these perks, like the role or early access, remains unclear without
-        details on the app's functionality or roadmap, making it critical to verify their utility. Risks to Consider:
-        Token price volatility. Network issues. Underwhelming app releases reducing the value of rewards and benefits.
-        Surprise community-driven releases, like airdrops or NFTs, could enhance returns, but their impact depends on
-        execution. Users should research the Sign Super App's ecosystem, roadmap, and $SIGN's market performance before
-        staking, as the pre-launch stage adds speculative risk.
+        <p style={paragraphStyle}>
+          The Sign Super App's staking program allows users to lock $SIGN tokens for a minimum of 7 days to earn rewards and benefits. With a 10% annual percentage rate (APR), staking offers competitive passive income, potentially yielding 100 $SIGN per 1,000 staked annually, though returns depend on token price stability.
+        </p>
+        <p style={paragraphStyle}>
+          The staking process likely involves a web interface (e.g., app.ethsign.xyz/staking), where users connect their wallets to stake tokens. Rewards are claimable periodically, and the short unstaking period provides flexibility.
+        </p>
+        <p style={paragraphStyle}>
+          Benefits of staking include a unique role in the app (possibly a status or governance privilege), exclusive early access to new releases, and recognition as a "certified orange builder" tied to the "Orange Dynasty" branding. These perks aim to foster community engagement and loyalty, potentially offering priority in app features or events.
+        </p>
+        <p style={paragraphStyle}>
+          However, there are risks to consider: token price volatility, network issues, and underwhelming app releases that could reduce the value of rewards and benefits. Surprise community-driven releases, like airdrops or NFTs, could enhance returns, but their impact depends on execution.
+        </p>
+        <p style={paragraphStyle}>
+          Users should research the Sign Super App’s ecosystem, roadmap, and $SIGN’s market performance before staking, as the pre-launch stage adds speculative risk.
+        </p>
       </>
     ),
-  }
+  };
 
-  const content3 = {
+  const content4 = {
     heading: "TERMINOLOGIES USED IN SIGN/ORANGE DYNASTY",
     body: (
       <div style={{ width: "100%" }}>
@@ -365,66 +370,57 @@ const Goals = () => {
           <div style={terminologyMeaningStyle}>I'm Shy</div>
           <div style={terminologyAuthorStyle}>@0xzoe_im</div>
         </div>
-
         <div style={terminologyItemStyle}>
           <span style={terminologyTermStyle}>Pulling a Tajudeen</span>
-          <div style={terminologyMeaningStyle}>Excessively rugging on twitter space</div>
+          <div style={terminologyMeaningStyle}>Excessively rugging on Twitter space</div>
           <div style={terminologyAuthorStyle}>@Tajudeen_10</div>
         </div>
-
         <div style={terminologyItemStyle}>
           <span style={terminologyTermStyle}>Meme Push-up guy</span>
           <div style={terminologyMeaningStyle}>A reference to someone who's always active and energetic</div>
           <div style={terminologyAuthorStyle}>Lucky @Lucky_of_Web3</div>
         </div>
-
         <div style={terminologyItemStyle}>
           <span style={terminologyTermStyle}>Orange Dynasty</span>
           <div style={terminologyMeaningStyle}>The community of Sign</div>
         </div>
-
         <div style={terminologyItemStyle}>
           <span style={terminologyTermStyle}>Signees</span>
           <div style={terminologyMeaningStyle}>Members of Sign</div>
         </div>
-
         <div style={terminologyItemStyle}>
           <span style={terminologyTermStyle}>SIGM</span>
           <div style={terminologyMeaningStyle}>Greeting format in the Orange Dynasty</div>
         </div>
-
         <div style={terminologyItemStyle}>
           <span style={terminologyTermStyle}>Signish</span>
           <div style={terminologyMeaningStyle}>When someone is bullish on Sign</div>
         </div>
-
         <div style={terminologyItemStyle}>
           <span style={terminologyTermStyle}>Make sure you carry OS</span>
           <div style={terminologyMeaningStyle}>Make sure you babe</div>
         </div>
-
         <div style={terminologyItemStyle}>
           <span style={terminologyTermStyle}>Orange is my veins</span>
           <div style={terminologyMeaningStyle}>I'm bullish on Sign</div>
         </div>
-
         <div style={terminologyItemStyle}>
           <span style={terminologyTermStyle}>Are you seeing Sign?</span>
           <div style={terminologyMeaningStyle}>Are you positioned in Sign?</div>
         </div>
-
         <div style={terminologyItemStyle}>
           <span style={terminologyTermStyle}>Signor</span>
           <div style={terminologyMeaningStyle}>Someone who introduces people to Sign</div>
         </div>
       </div>
     ),
-  }
+  };
 
   // Extract text for truncation
-  const content1Text = extractText(content1.body)
-  const content2Text = extractText(content2.body)
-  const content3Text = extractText(content3.body)
+  const content1Text = extractText(content1.body);
+  const content2Text = extractText(content2.body);
+  const content3Text = extractText(content3.body);
+  const content4Text = extractText(content4.body);
 
   return (
     <BackgroundWrapper>
@@ -492,7 +488,7 @@ const Goals = () => {
             </div>
           </div>
 
-          {/* Second Content Container */}
+          {/* Second Content Container - Steps On How to Properly Join Sign */}
           <div ref={container2Ref} style={contentContainerStyle}>
             <div style={contentTextStyle}>
               {showMore.container2 ? (
@@ -537,26 +533,23 @@ const Goals = () => {
             )}
 
             <div style={buttonsContainerStyle}>
-              {["Stake", "Unstake"].map((action) => (
-                <a
-                  key={action}
-                  href=" http://stake.sign.global "
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    ...buttonStyle,
-                    ...(hoveredButton2 === action ? buttonHoverStyle : {}),
-                  }}
-                  onMouseEnter={() => setHoveredButton2(action)}
-                  onMouseLeave={() => setHoveredButton2(null)}
-                >
-                  {action}
-                </a>
-              ))}
+              <a
+                href="http://sign.global/join"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  ...buttonStyle,
+                  ...(hoveredButton2 === "LearnMore" ? buttonHoverStyle : {}),
+                }}
+                onMouseEnter={() => setHoveredButton2("LearnMore")}
+                onMouseLeave={() => setHoveredButton2(null)}
+              >
+                Learn More
+              </a>
             </div>
           </div>
 
-          {/* Third Content Container - Terminologies */}
+          {/* Third Content Container */}
           <div ref={container3Ref} style={contentContainerStyle}>
             <div style={contentTextStyle}>
               {showMore.container3 ? (
@@ -567,15 +560,12 @@ const Goals = () => {
               ) : (
                 <>
                   <div style={headingStyle}>{content3.heading}</div>
-                  <div style={terminologyMeaningStyle}>
-                    Discover the unique slangs and terminologies used within the Sign/Orange Dynasty community. Each
-                    term carries special meaning and represents the vibrant culture of our ecosystem...
-                  </div>
+                  {truncateText(content3Text, charLimit - content3.heading.length)}
                 </>
               )}
             </div>
 
-            {!showMore.container3 && (
+            {!showMore.container3 && content3Text.length + content3.heading.length > charLimit && (
               <button
                 style={{
                   ...showMoreButtonStyle,
@@ -604,23 +594,92 @@ const Goals = () => {
             )}
 
             <div style={buttonsContainerStyle}>
-              <Link
-                to="/community"
+              {["Stake", "Unstake"].map((action) => (
+                <a
+                  key={action}
+                  href="http://stake.sign.global"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    ...buttonStyle,
+                    ...(hoveredButton3 === action ? buttonHoverStyle : {}),
+                  }}
+                  onMouseEnter={() => setHoveredButton3(action)}
+                  onMouseLeave={() => setHoveredButton3(null)}
+                >
+                  {action}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Fourth Content Container - Terminologies */}
+          <div ref={container4Ref} style={contentContainerStyle}>
+            <div style={contentTextStyle}>
+              {showMore.container4 ? (
+                <>
+                  <div style={headingStyle}>{content4.heading}</div>
+                  {content4.body}
+                </>
+              ) : (
+                <>
+                  <div style={headingStyle}>{content4.heading}</div>
+                  <div style={terminologyMeaningStyle}>
+                    Discover the unique slangs and terminologies used within the Sign/Orange Dynasty community. Each
+                    term carries special meaning and represents the vibrant culture of our ecosystem...
+                  </div>
+                </>
+              )}
+            </div>
+
+            {!showMore.container4 && (
+              <button
+                style={{
+                  ...showMoreButtonStyle,
+                  ...(hoveredButton4 === "showMore4" ? showMoreButtonHoverStyle : {}),
+                }}
+                onMouseEnter={() => setHoveredButton4("showMore4")}
+                onMouseLeave={() => setHoveredButton4(null)}
+                onClick={() => toggleShowMore("container4")}
+              >
+                Show More
+              </button>
+            )}
+
+            {showMore.container4 && (
+              <button
+                style={{
+                  ...showMoreButtonStyle,
+                  ...(hoveredButton4 === "showLess4" ? showMoreButtonHoverStyle : {}),
+                }}
+                onMouseEnter={() => setHoveredButton4("showLess4")}
+                onMouseLeave={() => setHoveredButton4(null)}
+                onClick={() => toggleShowMore("container4")}
+              >
+                Show Less
+              </button>
+            )}
+
+            <div style={buttonsContainerStyle}>
+              <a
+                href="https://x.com/sign"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   ...buttonStyle,
-                  ...(hoveredButton3 === "JoinCommunity" ? buttonHoverStyle : {}),
+                  ...(hoveredButton4 === "JoinCommunity" ? buttonHoverStyle : {}),
                 }}
-                onMouseEnter={() => setHoveredButton3("JoinCommunity")}
-                onMouseLeave={() => setHoveredButton3(null)}
+                onMouseEnter={() => setHoveredButton4("JoinCommunity")}
+                onMouseLeave={() => setHoveredButton4(null)}
               >
                 Join Community
-              </Link>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </BackgroundWrapper>
-  )
-}
+  );
+};
 
-export default Goals
+export default Goals;

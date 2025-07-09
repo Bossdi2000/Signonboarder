@@ -304,7 +304,7 @@ const HeroSection = () => {
                 maxWidth: "clamp(100px, 25vw, 120px)",
               }}
             >
-              <span>Sign's Guard</span>
+              <span>Sign's Guide</span>
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
