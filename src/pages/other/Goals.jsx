@@ -396,7 +396,7 @@ const Goals = () => {
         </p>
         <ol style={{ ...paragraphStyle, paddingLeft: "20px" }}>
           <li>
-            a. Click on the official sign Twitter link (<a href="https://x.com/sign" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@sign</a>)<br />
+            a. Click on the official sign Twitter link (<a href="https://sign.global/orange-dynasty" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@sign</a>)<br />
             b. Click on Let’s Go<br />
             C. Then connect your twitter account by clicking on the button on the top left corner<br />
             D. Click on Sign, complete the process and get signed<br />
@@ -420,7 +420,7 @@ const Goals = () => {
             - Then select Orange Dynasty and click on Save.
           </li>
           <li>
-            B. Join the telegram community of sign (<a href="https://t.me/signcommunity" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>Sign Telegram</a>) and respectfully vibe with everyone there
+            B. Join the telegram community of sign (<a href="https://t.me/orangedynasty" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>Sign Telegram</a>) and respectfully vibe with everyone there
           </li>
           <li>
             Go to all the official twitter accounts of sign which includes <a href="https://x.com/sign" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@sign</a>, <a href="https://x.com/ethsign" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@ethsign</a>, <a href="https://x.com/tokentable" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@tokentable</a>, <a href="https://x.com/signpass" target="_blank" rel="noopener noreferrer" style={{ color: "#ff9933", textDecoration: "none" }}>@signpass</a> and read all the simplified articles there in order to understand what sign is all about and then position yourself in the right way.

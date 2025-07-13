@@ -270,6 +270,11 @@ const Signees = () => {
       image: "/Sign28.jpg",
       twitter: "https://x.com/@welbina10",
     },
+    {
+      name: "Insider",
+      image: "/Sign29.jpg",
+      twitter: "https://x.com/@insider626",
+    },
   ]
 
   // Animation variants
