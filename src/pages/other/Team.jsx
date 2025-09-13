@@ -80,10 +80,10 @@ const Team = () => {
       twitter: "https://x.com/Bonakesh1",
     },
     {
-      name: "Big_D",
+      name: "DverseDev",
       role: "SignOnboarder Developer",
       image: "/Team5.jpeg",
-      twitter: "https://x.com/_BigDe",
+      twitter: "https://x.com/Dverse_Dev",
     },
     {
       name: "D Moore",
@@ -98,12 +98,6 @@ const Team = () => {
       twitter: "https://x.com/JamieInspires1",
     },
     {
-      name: "DOL4PO",
-      role: "SignOnboarder Writer",
-      image: "/Team2.jpeg",
-      twitter: "https://x.com/D0L4P0_",
-    },
-    {
       name: "MAALISH",
       role: "SignOnboarder Designer",
       image: "/Team1.jpeg",
@@ -114,12 +108,6 @@ const Team = () => {
       role: "SignOnboarder Advocate",
       image: "/Team8.jpg",
       twitter: "https://x.com/roffysayo1",
-    },
-     {
-      name: "Emerald's Gurl",
-      role: "SignOnboarder Coordinator",
-      image: "/Team9.jpg",
-      twitter: "https://x.com/@Hotboxofchoco",
     },
      {
       name: "TABBYTHEBLACK",
